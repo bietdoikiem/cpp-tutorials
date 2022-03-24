@@ -2,6 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "type": "shell",
+      "label": "Make a bin directory",
+      "command": "mkdir -p bin"
+    },
+    {
       "type": "cppbuild",
       "label": "C/C++: g++-11 build active file",
       "command": "/opt/homebrew/bin/g++-11",
@@ -17,7 +22,8 @@
       },
       "problemMatcher": ["$gcc"],
       "group": "build",
-      "detail": "compiler: /opt/homebrew/bin/g++-11"
+      "detail": "compiler: /opt/homebrew/bin/g++-11",
+      "dependsOn": ["Make a bin directory"]
     }
   ]
 }
